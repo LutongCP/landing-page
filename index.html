@@ -35,6 +35,12 @@
     header p {font-size:1.2em;margin-top:10px;}
     nav {background:#2c3e50;padding:10px;text-align:center;}
     nav a {color:white;margin:0 15px;text-decoration:none;font-weight:bold;}
+    section {padding:40px 20px;max-width:1000px;margin:auto;}
+    section h2 {color:#2c3e50;margin-bottom:15px;}
+    .cards {display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
+    .card {flex:1 1 250px;background:#f5f5f5;padding:20px;border-radius:8px;
+           box-shadow:0 2px 6px rgba(0,0,0,0.1);}
+    .card img {max-width:100%;border-radius:6px;}
     footer {background:#2c3e50;color:white;text-align:center;padding:20px;margin-top:40px;}
   </style>
 </head>
@@ -48,8 +54,6 @@
     </div>
     <h1>Together with Community, for the Lutong</h1>
     <p>Konservasi berbasis ilmiah dan komunitas untuk melindungi lutung kelabu dan hutan Belitung</p>
-    <a href="program.html" style="background:#27ae60;color:white;padding:10px 20px;
-       border-radius:5px;text-decoration:none;">Kenali Program Kami</a>
   </header>
 
   <!-- Navigation -->
@@ -59,6 +63,48 @@
     <a href="program.html">Program</a>
     <a href="kontak.html">Kontak</a>
   </nav>
+
+  <!-- Ringkasan Tentang Kami -->
+  <section>
+    <h2>Tentang Kami</h2>
+    <p>Lutong Conservation Project lahir dari semangat masyarakat Belitung untuk melindungi hutan, budaya, dan satwa liar. 
+       Fokus kami adalah konservasi lutung kelabu sebagai simbol ekologis dan identitas budaya.</p>
+    <a href="tentang.html">Baca Selengkapnya</a>
+  </section>
+
+  <!-- Ringkasan Publikasi -->
+  <section>
+    <h2>Publikasi Terbaru</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="assets/pub1.png" alt="Publikasi 1">
+        <h3>Climate Indicators in Coastal Regions</h3>
+      </div>
+      <div class="card">
+        <img src="assets/pub2.png" alt="Publikasi 2">
+        <h3>Microplastics in Urban Waterways</h3>
+      </div>
+    </div>
+    <a href="publikasi.html">Lihat Semua Publikasi</a>
+  </section>
+
+  <!-- Ringkasan Program -->
+  <section>
+    <h2>Program Utama</h2>
+    <ul>
+      <li>Penelitian ekologi lutung kelabu</li>
+      <li>Pendidikan lingkungan di sekolah-sekolah</li>
+      <li>Pemberdayaan masyarakat desa wisata</li>
+    </ul>
+    <a href="program.html">Kenali Program Kami</a>
+  </section>
+
+  <!-- Ringkasan Kontak -->
+  <section>
+    <h2>Hubungi Kami</h2>
+    <p>Punya ide atau ingin bergabung? Kami terbuka untuk kolaborasi.</p>
+    <a href="kontak.html">Hubungi Kami</a>
+  </section>
 
   <!-- Footer -->
   <footer>

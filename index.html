@@ -77,31 +77,28 @@
     h1, h2, h3, h4, h5, h6, p {
       text-align: center;}
     #contact {
-      text-align: center; /* semua teks di section ini rata tengah */
-      padding: 40px 20px;}
-    #contact h2 {
-      color: #2c3e50;
-      margin-bottom: 15px;}
-    #contact p {
-      max-width: 700px;
-      margin: 0 auto 20px auto; /* teks tetap center dengan lebar terbatas */
-      color: #555;}
-    #contact .contact-btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background: #2c3e50;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background 0.3s;}
-    #contact .contact-btn:hover {
-      background: #34495e;}
-    #contact {
-      text-align: center;
       padding: 40px 20px;
       border-top: 1px solid #ddd}
+   .contact-container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     max-width: 1000px;
+     margin: 0 auto;}
+  .contact-text {
+    text-align: left;
+    color: #555;}
+  .contact-btn {
+    display: inline-block;
+    padding: 8px 18px;
+    background: #2c3e50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;}
+  .contact-btn:hover {
+    background: #34495e;}
     #partners h2 {
       color:#2c3e50;
       margin-bottom:15px;}
@@ -194,10 +191,16 @@
 
 <!-- Ringkasan Kontak -->
 <section id="contact">
-  <h2>Contact Us</h2>
-  <p>Have an idea or want to get involved? 
-    We are always open to collaboration.</p>
-  <a href="kontak.html" class="contact-btn">Get in Touch</a>
+  <div class="contact-container">
+    <div class="contact-text">
+      <h2>Contact Us</h2>
+      <p>Have an idea or want to get involved? 
+        We are always open to collaboration.</p>
+    </div>
+    <div class="contact-action">
+      <a href="kontak.html" class="contact-btn">Get in Touch</a>
+    </div>
+  </div>
 </section>
       
   <!-- Footer -->

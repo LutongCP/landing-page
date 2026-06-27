@@ -31,9 +31,29 @@
       font-size:1.5em;
       color:white;
     }
+    .cards {
+      display:flex;
+      flex-wrap:wrap;
+      gap:20px;
+      justify-content:center;
+    }
+    .card {
+      flex:1 1 250px;
+      background:#f5f5f5;
+      padding:20px;
+      border-radius:8px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    }
+    .card img {
+      max-width:100%;
+      border-radius:6px;
+    }
+    .card p {
+      text-align:justify;   /* ini yang bikin teks rata kiri-kanan */
+      line-height:1.6;      /* biar lebih nyaman dibaca */
+    }
     header h1 {font-size:2.5em;margin:0;}
     header p {font-size:1.2em;margin-top:10px;}
-    p {text-align: justify;}
     nav {background:#2c3e50;padding:10px;text-align:center;}
     nav a {color:white;margin:0 15px;text-decoration:none;font-weight:bold;}
     section {padding:40px 20px;max-width:1000px;margin:auto;}
@@ -67,7 +87,7 @@
   <!-- Ringkasan Tentang Kami -->
   <section>
     <h2>Who we are?</h2>
-    <p>We believe that protecting the langur means protecting life itself. 
+    <p class ="justify">We believe that protecting the langur means protecting life itself. 
       The Lutong Conservation Project was born from Belitung’s collective spirit to defend forests, traditions, and wildlife. 
       Through research and community collaboration, we strive to restore the bond between people and nature for future generations.</p>
     <a href="tentang.html">Read More</a>

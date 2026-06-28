@@ -10,20 +10,34 @@
     header {background:#2c3e50;color:white;text-align:center;padding:40px;}
     nav {background:#34495e;padding:10px;text-align:center;}
     nav a {color:white;margin:0 15px;text-decoration:none;font-weight:bold;}
-    section {padding:60px 20px;max-width:800px;margin:auto;}
-    section h2 {color:#2c3e50;margin-bottom:20px;text-align:center;}
+    section {padding:60px 20px;max-width:1000px;margin:auto;}
 
-    /* Form styling */
+    /* Layout dua kolom */
+    .contact-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap:40px;
+      justify-content:space-between;
+      align-items:flex-start;
+    }
+
+    /* Form */
     .contact-form {
+      flex:1;
+      min-width:300px;
       background:#f9f9f9;
-      padding:30px;
+      padding:25px;
       border-radius:8px;
       box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    }
+    .contact-form h2 {
+      color:#2c3e50;
+      margin-bottom:15px;
     }
     .contact-form label {
       font-weight:bold;
       color:#2c3e50;
-      margin-bottom:5px;
+      margin-top:10px;
       display:block;
     }
     .contact-form input, .contact-form textarea {
@@ -45,13 +59,28 @@
       transition:background 0.3s;
     }
     .contact-form button:hover {background:#34495e;}
-
-    .contact-info {
-      margin-top:40px;
-      text-align:center;
+    .contact-form .note {
+      font-size:0.8em;
+      color:#777;
+      margin-top:10px;
     }
-    .contact-info h3 {color:#2c3e50;margin-bottom:10px;}
-    .contact-info p {margin:5px 0;}
+
+    /* Kolom kanan */
+    .contact-info {
+      flex:1;
+      min-width:300px;
+      text-align:left;
+    }
+    .contact-info p {
+      margin-bottom:20px;
+      color:#555;
+    }
+    .contact-img {
+      max-width:100%;
+      border-radius:8px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    }
+
     footer {background:#2c3e50;color:white;text-align:center;padding:10px;margin-top:40px;}
   </style>
 </head>
@@ -71,26 +100,34 @@
 </nav>
   
 <section>
-  <h2>Send us a message</h2>
-  <!-- Contact Form -->
-  <form class="contact-form" action="mailto:lutongcp@gmail.com" method="post" enctype="text/plain">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" required>
+  <div class="contact-container">
+    <!-- Kolom kiri: Form -->
+    <div class="contact-form">
+      <h2>Join With Us!</h2>
+      <form action="mailto:lutongcp@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
 
-    <label for="email">Your Email</label>
-    <input type="email" id="email" name="email" required>
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" required>
 
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
 
-    <button type="submit">Send Message</button>
-  </form>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
 
-  <!-- Contact Info -->
-  <div class="contact-info">
-    <h3>Other ways to reach us</h3>
-    <p>Email: <a href="mailto:lutongcp@gmail.com">lutongcp@gmail.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/lutongcp" target="_blank">@lutongcp</a></p>
+        <button type="submit">Submit</button>
+      </form>
+      <p class="note">Your details help us connect with you. We promise to use them wisely and never disclose them publicly.</p>
+    </div>
+
+    <!-- Kolom kanan: Deskripsi / Gambar -->
+    <div class="contact-info">
+      <p>
+        Step into the field as a volunteer, strengthen our research, or amplify our impact by engaging communities through education and fundraising.</p>
+      <img src="assets/trachypithecus_cristatus.jpg" alt="Relawan penelitian lapangan" class="contact-img">
+    </div>
   </div>
 </section>
 

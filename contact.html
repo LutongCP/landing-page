@@ -11,17 +11,31 @@
     nav {background:#34495e;padding:10px;text-align:center;}
     nav a {color:white;margin:0 15px;text-decoration:none;font-weight:bold;}
     section {padding:60px 20px;max-width:800px;margin:auto;}
-    section h2 {color:#2c3e50;margin-bottom:20px;text-align:left;}
-    form {display:flex;flex-direction:column;gap:15px;}
-    label {font-weight:bold;color:#2c3e50;}
-    input, textarea {
+    section h2 {color:#2c3e50;margin-bottom:20px;text-align:center;}
+
+    /* Form styling */
+    .contact-form {
+      background:#f9f9f9;
+      padding:30px;
+      border-radius:8px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    }
+    .contact-form label {
+      font-weight:bold;
+      color:#2c3e50;
+      margin-bottom:5px;
+      display:block;
+    }
+    .contact-form input, .contact-form textarea {
+      width:100%;
       padding:10px;
       border:1px solid #ccc;
       border-radius:5px;
+      margin-bottom:15px;
       font-family:inherit;
     }
-    button {
-      padding:10px 20px;
+    .contact-form button {
+      padding:12px 25px;
       background:#2c3e50;
       color:white;
       border:none;
@@ -29,13 +43,12 @@
       font-weight:bold;
       cursor:pointer;
       transition:background 0.3s;
-      align-self:flex-start;
     }
-    button:hover {background:#34495e;}
+    .contact-form button:hover {background:#34495e;}
+
     .contact-info {
-      margin-top:30px;
-      padding-top:20px;
-      border-top:1px solid #ddd;
+      margin-top:40px;
+      text-align:center;
     }
     .contact-info h3 {color:#2c3e50;margin-bottom:10px;}
     .contact-info p {margin:5px 0;}
@@ -46,7 +59,7 @@
 
 <header>
   <h1>Contact Us</h1>
-  <p>We welcome ideas, collaborations, and conversations that help us protect Belitung’s ecosystem and wildlife.</p>
+  <p>We welcome ideas, collaborations, and conversations that help us protect Belitung’s forests and wildlife.</p>
 </header>
 
 <nav>
@@ -60,14 +73,14 @@
 <section>
   <h2>Send us a message</h2>
   <!-- Contact Form -->
-  <form action="mailto:lutongcp@gmail.com" method="post" enctype="text/plain">
-    <label for="name">Name:</label>
+  <form class="contact-form" action="mailto:lutongcp@gmail.com" method="post" enctype="text/plain">
+    <label for="name">Name</label>
     <input type="text" id="name" name="name" required>
 
-    <label for="email">Your Email:</label>
+    <label for="email">Your Email</label>
     <input type="email" id="email" name="email" required>
 
-    <label for="message">Message:</label>
+    <label for="message">Message</label>
     <textarea id="message" name="message" rows="5" required></textarea>
 
     <button type="submit">Send Message</button>

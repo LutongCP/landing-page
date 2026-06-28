@@ -14,39 +14,7 @@
     section h2 {color:#2c3e50;margin-bottom:20px;text-align:center;}
     .slide {margin-bottom:60px;}
     .slide p {text-align:justify;}
-    .our-team p {
-      text-align: center; /* hanya paragraf di Our Team */
-    }
-    .team {
-      display:flex;
-      flex-wrap:wrap;
-      gap:40px;
-      justify-content:center;
-      margin-top:30px;
-    }
-    .member {
-      text-align:center;
-      max-width:200px;
-    }
-    .member .profile {
-      width:150px;
-      height:150px;
-      border-radius:50%;
-      object-fit:cover;
-      border:3px solid #2c3e50;
-    }
-    .member h3 {
-      margin-top:10px;
-      font-size:1.2em;
-      color:#2c3e50;
-    }
-    .member p {
-      font-size:0.9em;
-      color:#555;
-    }
-    .center-text {
-      text-align: center;
-    }
+    .center-text {text-align: center;}
     footer {background:#2c3e50;color:white;text-align:center;padding:10px;margin-top:40px;}
   </style>
 </head>
@@ -66,3 +34,32 @@
 </nav>
   
 <section>
+<h2>Send us a message</h2>
+  <!-- Contact Form -->
+  <form action="mailto:lutongcp@gmail.com" method="post" enctype="text/plain">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <!-- Contact Info -->
+  <div class="contact-info">
+    <h2>Other ways to reach us</h2>
+    <p>Email: <a href="mailto:lutongcp@gmail.com">lutongcp@gmail.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/lutongcp" target="_blank">@lutongcp</a></p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Lutong Conservation Project</p>
+</footer>
+
+</body>
+</html>
